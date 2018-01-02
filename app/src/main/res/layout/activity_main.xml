@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,12 +9,97 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UEFA European Championship finals"
+        android:text="@string/competition"
+        android:layout_alignParentTop="true"
+        android:id="@+id/competition_name"
+        android:layout_centerHorizontal="true"
+
          />
-    <ImageView
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fr"
-        />
+        android:text="@string/score_text"
+        android:layout_below="@id/competition_name"
+        android:id="@+id/score"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
 
-</LinearLayout>
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/score"
+        android:id="@+id/teams"
+        >
+
+     <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:text="@string/country_france"
+         android:drawableBottom="@drawable/pt"
+         android:gravity="center"
+         android:textSize="15dp"
+         android:textAllCaps="true"
+         android:drawablePadding="10dp"
+         android:textStyle="bold"
+         android:layout_weight="1"
+
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/country_portugal"
+            android:drawableBottom="@drawable/fr"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textAllCaps="true"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teams"
+        android:orientation="horizontal"
+        android:id="@+id/add_goal">
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/goal"
+        android:layout_weight="1"
+        />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/goal"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/faul_text"
+    android:layout_below="@id/add_goal"
+    android:layout_centerHorizontal="true"
+    android:textAllCaps="true"/>
+
+
+</RelativeLayout>
