@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:text="@string/country_portugal"
             android:drawableBottom="@drawable/fr"
+
             android:gravity="center"
             android:textSize="15dp"
             android:textAllCaps="true"
@@ -78,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/teams"
         android:orientation="horizontal"
-        android:id="@+id/add_goal">
+        android:id="@+id/add_goal_buttons">
 
         <Button
         android:layout_width="0dp"
@@ -97,9 +98,35 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/faul_text"
-    android:layout_below="@id/add_goal"
+    android:layout_below="@id/add_goal_buttons"
     android:layout_centerHorizontal="true"
-    android:textAllCaps="true"/>
+    android:textAllCaps="true"
+    android:id="@+id/fauls_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fauls_text"
+        android:orientation="horizontal"
+        android:id="@+id/add_faul_buttons">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/faul_button"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/pt"
+            android:height="36dp"
+
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/faul_button"
+            android:layout_weight="1"
+            android:height="36dp"
+            android:background="@drawable/proba"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
